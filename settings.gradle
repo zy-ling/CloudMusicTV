@@ -1,0 +1,4 @@
+rootProject.name = 'cloudmusictv'
+include('api')
+include('tv')
+

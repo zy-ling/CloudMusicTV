@@ -1,0 +1,51 @@
+group 'com.hdwwxx'
+version '1.0'
+
+buildscript {
+    ext {
+        kotlinVersion = '1.1.0-rc-91'
+    }
+    repositories {
+//        mavenCentral()
+        maven { url 'http://maven.aliyun.com/mvn/repository/' }
+        maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.1' }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+    }
+}
+
+apply plugin: 'idea'
+apply plugin: 'kotlin'
+
+sourceCompatibility = 1.8
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+repositories {
+    maven { url 'http://maven.aliyun.com/mvn/repository/' }
+    maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.1' }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
+
+
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile "org.apache.commons:commons-lang3:3.5"
+}
