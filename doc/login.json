@@ -1,0 +1,102 @@
+// http://music.163.com/weapi/login/cellphone
+{
+  "loginType": 1,
+  "code": 200,
+  "account": {
+    "id": 17952620,
+    "userName": "0_vitoling95@163.com",
+    "type": 0,
+    "status": 0,
+    "whitelistAuthority": 0,
+    "createTime": 0,
+    "salt": "",
+    "tokenVersion": 0,
+    "ban": 0,
+    "baoyueVersion": 0,
+    "donateVersion": 0,
+    "vipType": 0,
+    "viptypeVersion": 0,
+    "anonimousUser": false
+  },
+  "profile": {
+    "userId": 17952620,
+    "accountStatus": 0,
+    "nickname": "牧木凌",
+    "expertTags": null,
+    "avatarImgId": 109951162865552862,
+    "backgroundImgId": 2002210674180199,
+    "userType": 0,
+    "vipType": 0,
+    "authStatus": 0,
+    "remarkName": null,
+    "mutual": false,
+    "backgroundUrl": "http://p1.music.126.net/VTW4vsN08vwL3uSQqPyHqg==/2002210674180199.jpg",
+    "defaultAvatar": false,
+    "avatarUrl": "http://p1.music.126.net/FCb2Od0bAq0aKSaDBGi_FQ==/109951162865552862.jpg",
+    "gender": 1,
+    "birthday": 780681600000,
+    "city": 360100,
+    "followed": false,
+    "detailDescription": "",
+    "djStatus": 0,
+    "province": 360000,
+    "description": "",
+    "avatarImgIdStr": "109951162865552862",
+    "backgroundImgIdStr": "2002210674180199",
+    "signature": "一个纯粹的坏人",
+    "authority": 0,
+    "avatarImgId_str": "109951162865552862"
+  },
+  "bindings": [
+    {
+      "userId": 17952620,
+      "url": "",
+      "tokenJsonStr": "{\"cellphone\":\"18970967366\",\"hasPassword\":false}",
+      "expiresIn": 2147483647,
+      "refreshTime": 1401165500,
+      "expired": false,
+      "id": 8366630,
+      "type": 1
+    },
+    {
+      "userId": 17952620,
+      "url": "http://t.qq.com/ling371148667",
+      "tokenJsonStr": "{\"openkey\":\"3744A205827FD80BBD185B452D068CAC\",\"nick\":\"你哥是大宝SOD\",\"name\":\"ling371148667\",\"openid\":\"9abfbe9f0e3b15d4fce4df64777f0c95\",\"expires_in\":\"8035200\",\"refresh_token\":\"4ffbf055716f2902d5f92c374753e4cc\",\"access_token\":\"6d88c460da076649f6f23f119f3d1afc\",\"openId\":\"9ABFBE9F0E3B15D4FCE4DF64777F0C95\",\"state\":\"\"}",
+      "expiresIn": 8035200,
+      "refreshTime": 1437994158,
+      "expired": true,
+      "id": 30069734,
+      "type": 6
+    },
+    {
+      "userId": 17952620,
+      "url": "http://www.renren.com/388227177",
+      "tokenJsonStr": "{\"scope\":\"photo_upload status_update create_album publish_share read_user_album publish_feed\",\"expires_in\":2593880,\"token_type\":\"bearer\",\"refresh_token\":\"221599|0.ThE2cReifeC1RzPAsGtE8KnEOWJlcNxS.388227177.1429103058918\",\"user\":{\"id\":388227177,\"name\":\"凌志远\",\"avatar\":[{\"type\":\"avatar\",\"url\":\"http://hdn.xnimg.cn/photos/hdn321/20130105/0050/h_head_bIyk_ebff0000010b113e.jpg\"},{\"type\":\"tiny\",\"url\":\"http://hdn.xnimg.cn/photos/hdn321/20130105/0050/h_tiny_tDzk_ebff0000010b113e.jpg\"},{\"type\":\"main\",\"url\":\"http://hdn.xnimg.cn/photos/hdn321/20130105/0050/h_main_86vH_ebff0000010b113e.jpg\"},{\"type\":\"large\",\"url\":\"http://hdn.xnimg.cn/photos/hdn321/20130105/0050/h_large_HBE7_ebff0000010b113e.jpg\"}]},\"access_token\":\"221599|6.da2d89b6a5479576ebe5c6b7a87a59a1.2592000.1477126800-388227177\"}",
+      "expiresIn": 2593880,
+      "refreshTime": 1474532918,
+      "expired": true,
+      "id": 30080645,
+      "type": 4
+    },
+    {
+      "userId": 17952620,
+      "url": "",
+      "tokenJsonStr": "{\"uid\":\"24939cdff9de33dac3061cd18d77b7a0\",\"nick\":\"牧木凌\",\"expires_in\":2591999,\"token_type\":\"bearer\",\"refresh_token\":\"41a60dbd-6f86-40c9-8342-20ad92d683c8\",\"access_token\":\"cb48b2de-5a90-4fc0-8896-75ae8f9a0e8d\"}",
+      "expiresIn": 2147483647,
+      "refreshTime": 1408286304,
+      "expired": false,
+      "id": 8366624,
+      "type": 8
+    },
+    {
+      "userId": 17952620,
+      "url": "",
+      "tokenJsonStr": "{\"email\":\"vitoling95@163.com\"}",
+      "expiresIn": 2147483647,
+      "refreshTime": 1430146204,
+      "expired": false,
+      "id": 30980140,
+      "type": 0
+    }
+  ]
+}

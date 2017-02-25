@@ -1,20 +1,29 @@
-package com.vitoling.cloudmusictv.api.model
+package com.vitoling.cloudmusictv.data.model.v3.playlist
+
+import com.vitoling.cloudmusictv.data.model.common.Creator
+
 
 /**
  * Created by lingzhiyuan.
- * Date : 2/24/17.
- * Time : 21:52.
+ * Date : 2/25/17.
+ * Time : 19:38.
  * Description:
  *
  */
 
-data class Playlist(
+data class PlaylistDetailResponse(
+        var playlist: PlaylistDetail,
+        //      var previleges: List<>,
+        var code: Int
+                                 )
+
+data class PlaylistDetail(
         var subscribers: List<Any>,
         var subscribed: Boolean,
         var creator: Creator,
-        var tracks: List<Any>,
-        var trackIds: List<Any>,
-        var tags: List<Any>,
+        var tracks: List<Track>,
+        var trackIds: List<TrackId>,
+        var tags: List<String>,
         var adType: Int,
         var trackNumberUpdateTime: Long,
         var subscribedCount: Long,
@@ -38,37 +47,7 @@ data class Playlist(
         var id: Long,
         var shareCount: Long,
         var commentCount: Long
-                   )
-
-data class Creator(
-        var defaultAvatar: Boolean,
-        var province: Int?,
-        var authStatus: Int,
-        var followed: Boolean,
-        var avatarUrl: String?,
-        var accountStatus: Int,
-        var gender: Int,
-        var city: Int?,
-        var birthday: Long?,
-        var userId: Long,
-        var userType: Int,
-        var nickname: String?,
-        var signature: String?,
-        var description: String?,
-        var detailDescription: String?,
-        var avatarImgId: Long?,
-        var backgroundImgId: Long,
-        var backgroundUrl: String?,
-        var authority: Int?,
-        var mutual: Boolean,
-        var expertTags: Any,
-        var djStatus: Int,
-        var vipType: Int,
-        var remarkName: String?,
-        var avatarImgIdStr: Long?,
-        var backgroundImgIdStr: Long?,
-        var avatarImgId_str: Long?
-                  )
+                         )
 
 data class Track(
         var name: String,
@@ -101,3 +80,8 @@ data class Track(
         var cp: Long,
         var mv: Long
                 )
+
+data class TrackId(
+        var id: Long,
+        var v: Long
+                  )

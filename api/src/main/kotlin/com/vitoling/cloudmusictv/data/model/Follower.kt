@@ -1,4 +1,4 @@
-package com.vitoling.cloudmusictv.api.model
+package com.vitoling.cloudmusictv.data.model
 
 /**
  * Created by lingzhiyuan.

@@ -1,3 +1,5 @@
+// POST http://music.163.com/weapi/v3/playlist/detail
+
 {
   "playlist": {
     "subscribers": [],
@@ -56,7 +58,7 @@
         "al": {
           "id": 1814518,
           "name": "Constant Companion",
-          "picUrl": "http://p3.music.126.net/wbzIjm8dEaa6vFkvXJ3EIA==/6668538023345763.jpg",
+          "picUrl": "http://p4.music.126.net/wbzIjm8dEaa6vFkvXJ3EIA==/6668538023345763.jpg",
           "tns": [],
           "pic": 6668538023345763
         },
@@ -121,7 +123,7 @@
         "al": {
           "id": 34477018,
           "name": "Aftershock",
-          "picUrl": "http://p4.music.126.net/kgyniSNTrI0f8q0FRmgp-A==/1426066581780429.jpg",
+          "picUrl": "http://p3.music.126.net/kgyniSNTrI0f8q0FRmgp-A==/1426066581780429.jpg",
           "tns": [],
           "pic": 1426066581780429
         },
@@ -186,7 +188,7 @@
         "al": {
           "id": 34589950,
           "name": "Colors (Sam Feldt Remix)",
-          "picUrl": "http://p3.music.126.net/2EeoGjM7ovXn2lIzxBjPAg==/1367792469502298.jpg",
+          "picUrl": "http://p4.music.126.net/2EeoGjM7ovXn2lIzxBjPAg==/1367792469502298.jpg",
           "tns": [],
           "pic": 1367792469502298
         },
@@ -370,7 +372,7 @@
         "al": {
           "id": 2691527,
           "name": "Sunflower",
-          "picUrl": "http://p3.music.126.net/QyGuV3Q9lUe4gYP24xWP7g==/1893359023152677.jpg",
+          "picUrl": "http://p4.music.126.net/QyGuV3Q9lUe4gYP24xWP7g==/1893359023152677.jpg",
           "tns": [],
           "pic": 1893359023152677
         },
@@ -429,7 +431,7 @@
         "al": {
           "id": 2902150,
           "name": "最新热歌慢摇73",
-          "picUrl": "http://p4.music.126.net/BE6VAWhFxzccB6vDmF_aIg==/3294136838291295.jpg",
+          "picUrl": "http://p3.music.126.net/BE6VAWhFxzccB6vDmF_aIg==/3294136838291295.jpg",
           "tns": [],
           "pic": 3294136838291295
         },
@@ -494,7 +496,7 @@
         "al": {
           "id": 3109302,
           "name": "Glorious (OLWIK Remix)",
-          "picUrl": "http://p3.music.126.net/-lpb0YUKuFMSDGElRb6RMQ==/7829622301876507.jpg",
+          "picUrl": "http://p4.music.126.net/-lpb0YUKuFMSDGElRb6RMQ==/7829622301876507.jpg",
           "tns": [],
           "pic": 7829622301876507
         },
@@ -618,7 +620,7 @@
         "al": {
           "id": 3109703,
           "name": "Counting Sheep",
-          "picUrl": "http://p3.music.126.net/MXzI7ExXb6ru3CeW_P1HSw==/7906588115831440.jpg",
+          "picUrl": "http://p4.music.126.net/MXzI7ExXb6ru3CeW_P1HSw==/7906588115831440.jpg",
           "tns": [],
           "pic": 7906588115831440
         },
@@ -866,7 +868,7 @@
         "al": {
           "id": 34866041,
           "name": "In Rainbows Disk 2",
-          "picUrl": "http://p4.music.126.net/8Rwa1OPyDLkLWHQXGYk1cQ==/17718629881998804.jpg",
+          "picUrl": "http://p3.music.126.net/8Rwa1OPyDLkLWHQXGYk1cQ==/17718629881998804.jpg",
           "tns": [],
           "pic_str": "17718629881998804",
           "pic": 17718629881998804
@@ -926,7 +928,7 @@
         "al": {
           "id": 506661,
           "name": "Country's Greatest Hits 3CD",
-          "picUrl": "http://p4.music.126.net/w45q5kmhCc_EuMXFmLUBCA==/1742725930037267.jpg",
+          "picUrl": "http://p3.music.126.net/w45q5kmhCc_EuMXFmLUBCA==/1742725930037267.jpg",
           "tns": [],
           "pic": 1742725930037267
         },
@@ -1044,7 +1046,7 @@
         "al": {
           "id": 1993583,
           "name": "The Purple People Eater",
-          "picUrl": "http://p4.music.126.net/Jzp1-Cbi2_IY21IDonrF5Q==/2590449395056340.jpg",
+          "picUrl": "http://p3.music.126.net/Jzp1-Cbi2_IY21IDonrF5Q==/2590449395056340.jpg",
           "tns": [],
           "pic": 2590449395056340
         },
@@ -1523,7 +1525,7 @@
         "al": {
           "id": 3102813,
           "name": "Break Me Up",
-          "picUrl": "http://p4.music.126.net/7GdJfSvO1j3aFpD6scnLzg==/7743860394623955.jpg",
+          "picUrl": "http://p3.music.126.net/7GdJfSvO1j3aFpD6scnLzg==/7743860394623955.jpg",
           "tns": [],
           "pic": 7743860394623955
         },
@@ -1582,7 +1584,7 @@
         "al": {
           "id": 1697835,
           "name": "The Black & White EP",
-          "picUrl": "http://p4.music.126.net/L9azk1rkho0U3_veyO33Kw==/639915767375037.jpg",
+          "picUrl": "http://p3.music.126.net/L9azk1rkho0U3_veyO33Kw==/639915767375037.jpg",
           "tns": [],
           "pic": 639915767375037
         },
@@ -1641,7 +1643,7 @@
         "al": {
           "id": 34754219,
           "name": "Sailing",
-          "picUrl": "http://p4.music.126.net/qPcrGvvQftBrhqB7AEzA9g==/1402976849446959.jpg",
+          "picUrl": "http://p3.music.126.net/qPcrGvvQftBrhqB7AEzA9g==/1402976849446959.jpg",
           "tns": [],
           "pic": 1402976849446959
         },
@@ -1700,7 +1702,7 @@
         "al": {
           "id": 260600,
           "name": "O' Holiday",
-          "picUrl": "http://p4.music.126.net/3fscQk_P1idEf23DxPC5BA==/1737228371891207.jpg",
+          "picUrl": "http://p3.music.126.net/3fscQk_P1idEf23DxPC5BA==/1737228371891207.jpg",
           "tns": [],
           "pic": 1737228371891207
         },
@@ -1877,7 +1879,7 @@
         "al": {
           "id": 3011453,
           "name": "Eight Houses",
-          "picUrl": "http://p4.music.126.net/s2lEy6HKtip5CJa9073b2g==/6620159511276566.jpg",
+          "picUrl": "http://p3.music.126.net/s2lEy6HKtip5CJa9073b2g==/6620159511276566.jpg",
           "tns": [],
           "pic": 6620159511276566
         },
@@ -2054,7 +2056,7 @@
         "al": {
           "id": 2923073,
           "name": "最新热歌慢摇76",
-          "picUrl": "http://p3.music.126.net/PaCWRxXASgHp2yHl6E6w-g==/3262251001467554.jpg",
+          "picUrl": "http://p4.music.126.net/PaCWRxXASgHp2yHl6E6w-g==/3262251001467554.jpg",
           "tns": [],
           "pic": 3262251001467554
         },
@@ -2103,7 +2105,7 @@
           }
         ],
         "alia": [],
-        "pop": 100.0,
+        "pop": 95.0,
         "st": 0,
         "rt": "",
         "fee": 0,
@@ -2113,7 +2115,7 @@
         "al": {
           "id": 417252,
           "name": "Rapture Reconstruction: Platinum Edition",
-          "picUrl": "http://p3.music.126.net/H43FfB-T99UC7ryt8woi7A==/775155697626015.jpg",
+          "picUrl": "http://p4.music.126.net/H43FfB-T99UC7ryt8woi7A==/775155697626015.jpg",
           "tns": [],
           "pic": 775155697626015
         },
@@ -2355,7 +2357,7 @@
         "al": {
           "id": 1868816,
           "name": "Electra Heart",
-          "picUrl": "http://p4.music.126.net/bj51tiw2-ueUnC8jnya22A==/6669637534930298.jpg",
+          "picUrl": "http://p3.music.126.net/bj51tiw2-ueUnC8jnya22A==/6669637534930298.jpg",
           "tns": [],
           "pic": 6669637534930298
         },
@@ -2420,7 +2422,7 @@
         "al": {
           "id": 1603658,
           "name": "2001",
-          "picUrl": "http://p4.music.126.net/fUdfYShGy8zOC7pN-WvYXQ==/560750930174131.jpg",
+          "picUrl": "http://p3.music.126.net/fUdfYShGy8zOC7pN-WvYXQ==/560750930174131.jpg",
           "tns": [],
           "pic": 560750930174131
         },
@@ -2544,7 +2546,7 @@
         "al": {
           "id": 3131123,
           "name": "Blurryface",
-          "picUrl": "http://p3.music.126.net/47tUhx6-SFRbW-fBoO1U2Q==/2926899954016297.jpg",
+          "picUrl": "http://p4.music.126.net/47tUhx6-SFRbW-fBoO1U2Q==/2926899954016297.jpg",
           "tns": [],
           "pic": 2926899954016297
         },
@@ -2603,7 +2605,7 @@
         "al": {
           "id": 3021150,
           "name": "Lenachka",
-          "picUrl": "http://p4.music.126.net/pKAEbripER-VPATHI8lLAw==/2538772348746148.jpg",
+          "picUrl": "http://p3.music.126.net/pKAEbripER-VPATHI8lLAw==/2538772348746148.jpg",
           "tns": [],
           "pic": 2538772348746148
         },
@@ -2786,7 +2788,7 @@
         "al": {
           "id": 290027,
           "name": "Me",
-          "picUrl": "http://p4.music.126.net/XfcPoljRr2ONWK3A40fa2g==/827932255760293.jpg",
+          "picUrl": "http://p3.music.126.net/XfcPoljRr2ONWK3A40fa2g==/827932255760293.jpg",
           "tns": [],
           "pic": 827932255760293
         },
@@ -2910,7 +2912,7 @@
         "al": {
           "id": 2778297,
           "name": "Sirens",
-          "picUrl": "http://p3.music.126.net/k1MYhX_NOCe6b1z-73zFzg==/5928566697366866.jpg",
+          "picUrl": "http://p4.music.126.net/k1MYhX_NOCe6b1z-73zFzg==/5928566697366866.jpg",
           "tns": [],
           "pic": 5928566697366866
         },
@@ -2975,7 +2977,7 @@
         "al": {
           "id": 2956159,
           "name": "最新热歌慢摇77",
-          "picUrl": "http://p3.music.126.net/32wVmEaNkA1mcoZNfFuSRA==/3264450024433082.jpg",
+          "picUrl": "http://p4.music.126.net/32wVmEaNkA1mcoZNfFuSRA==/3264450024433082.jpg",
           "tns": [],
           "pic": 3264450024433082
         },
@@ -3210,24 +3212,24 @@
       }
     ],
     "tags": [],
-    "adType": 0,
-    "trackNumberUpdateTime": 1487738343783,
-    "subscribedCount": 1,
-    "status": 0,
-    "coverImgId": 3385396303116344,
-    "trackCount": 49,
-    "createTime": 1401039672236,
-    "playCount": 9625,
+    "ordered": true,
+    "privacy": 0,
     "userId": 17952620,
     "specialType": 5,
     "updateTime": 1487738343783,
     "commentThreadId": "A_PL_0_14660449",
+    "trackCount": 49,
     "trackUpdateTime": 1487915973853,
-    "privacy": 0,
     "newImported": false,
+    "coverImgId": 3385396303116344,
     "highQuality": false,
+    "createTime": 1401039672236,
+    "playCount": 9625,
+    "status": 0,
+    "adType": 0,
+    "trackNumberUpdateTime": 1487738343783,
+    "subscribedCount": 1,
     "cloudTrackCount": 0,
-    "ordered": true,
     "description": null,
     "name": "牧木凌喜欢的音乐",
     "id": 14660449,

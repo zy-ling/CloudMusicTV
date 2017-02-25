@@ -1,5 +1,6 @@
-package com.vitoling.cloudmusictv.api
+package com.vitoling.cloudmusictv.data
 
+import com.google.gson.Gson
 import org.apache.http.Header
 import org.apache.http.NameValuePair
 import org.apache.http.client.config.RequestConfig
@@ -23,10 +24,11 @@ class Test {
 }
 
 fun main(args: Array<String>) {
-//    val res = API.loginViaUsername("vitoling95@163.com", "ling371148667")
-    val res = API.loginViaCellPhone("18970967366", "ling371148667")
-    println(res)
-//    hello(arrayOf())
+//    val res = API.login("vitoling95@163.com", "ling371148667", true)
+//    val res = API.login("18970967366", "ling371148667", false)
+//    val res = API.fetchMyPlaylist(0, 1001, 17952620)
+    val res = API.fetchPlaylistDetail(14660449, 0, true, 1000, 1000)
+    println(Gson().toJson(res.body()))
 }
 
 fun hello(args: Array<String>) {
