@@ -41,7 +41,7 @@ private const val HEADER_HOST_VALUE = "music.163.com"
 private const val HEADER_CONTENT_TYPE = "Content-Type"
 private const val HEADER_CONTENT_TYPE_VALUE = "application/x-www-form-urlencoded"
 private const val COOKIE_APP_VER = "appver"
-private const val COOKIE_APP_VER_VALUE = "1.5.2"
+private const val COOKIE_APP_VER_VALUE = "2.7.1"
 
 internal interface CloudMusicAPI {
 
@@ -66,7 +66,7 @@ internal interface CloudMusicAPI {
         }
 
         // 设置cookie
-        val cookieManager = CookieManager().apply {
+        private val cookieManager = CookieManager().apply {
             setCookiePolicy(CookiePolicy.ACCEPT_ALL)
             // add a basic cookie "appver"
             // cookies will update automatically after each call
@@ -95,7 +95,7 @@ internal interface CloudMusicAPI {
      * 账号登录
      * */
     @POST("login")
-    fun login(@Body body: RequestBody): Call<LoginResponse>
+    fun login(@Body body: RequestBody): Call<Any>
 
     /**
      * 手机号登录

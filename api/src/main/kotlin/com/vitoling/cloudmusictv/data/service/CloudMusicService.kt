@@ -45,9 +45,12 @@ object CloudMusicService {
         return call.execute()
     }
 
-    internal fun loginViaUsername(username: String, password: String): Response<LoginResponse> {
+    /**
+     * not working due to yidun
+     * */
+    internal fun loginViaUsername(username: String, password: String): Response<Any> {
 
-        val params = mapOf("username" to username, "password" to EUtil.MD5Encrypt(password), "rememberLogin" to true)
+        val params = mapOf("username" to username, "password" to EUtil.MD5Encrypt(password), "rememberLogin" to true, "clientToken" to "1_E+ypitxL1PuC0dQsbWpFSbfoJrl6OzKN_JQJaQgkv32AtvYSndelHB4UMOzOTuWty_BxTl/MPFvyHLdF4KmnGaSw==")
         val formBody = getRequest(params)
         val call = musicAPI.login(formBody)
         return call.execute()
@@ -61,7 +64,6 @@ object CloudMusicService {
         return call.execute()
     }
 
-    // 获取自己的歌单
     internal fun fetchMyPlaylist(offset: Long = 0, limit: Long = 1001, uid: Long): Response<PlaylistResponse> {
 
         val params = mapOf("offset" to offset, "limit" to limit, "uid" to uid)

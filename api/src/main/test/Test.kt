@@ -9,12 +9,13 @@ import com.vitoling.cloudmusictv.data.service.*
  */
 
 fun main(args: Array<String>) {
-    val res = CloudMusicService.loginViaUsername("vitoling95@163.com", "ling371148667")
+
+    val res = CloudMusicService.loginViaCellphone("18970967366", "ling371148667")
     println(Gson().toJson(res.body()))
-    //    val res = CloudMusicService.loginViaCellphone("18970967366", "ling371148667")
-    //    println(Gson().toJson(res.body()))
-    //    val pl = CloudMusicService.fetchMyPlaylist(uid = res.body().account?.id ?: 48167)
-    //    println(Gson().toJson(pl.body()))
+    //        val res2 = CloudMusicService.loginViaUsername("vitoling95@163.com", "ling371148667")
+    //        println(Gson().toJson(res2.body()))
+    //        val pl = CloudMusicService.fetchMyPlaylist(uid = res.body().account?.id ?: 48167)
+    //        println(Gson().toJson(pl.body()))
     //    val pd = CloudMusicService.fetchPlaylistDetail(/*pl.body().playlist?.get(5)?.id ?: */14660449, 0, true, 1000, 1000)
     //    println(Gson().toJson(pd.body()))
     //    val sd = CloudMusicService.fetchSongDetail(pd.body().playlist.trackIds[0].id)

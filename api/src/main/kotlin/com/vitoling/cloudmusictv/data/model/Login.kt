@@ -69,6 +69,7 @@ data class Account(
 data class LoginResponse(
         var loginType: Int,
         var code: Int,
+        var msg: String?,
         var account: Account?,
         var profile: Profile?,
         var bindings: List<Binding>?
