@@ -42,8 +42,8 @@ data class Profile(
         var djStatus: Int,
         var province: Long,
         var description: String?,
-        var avatarImgIdStr: Long,
-        var backgroundImgIdStr: Long,
+        var avatarImgIdStr: String?,
+        var backgroundImgIdStr: String?,
         var signature: String?,
         var authority: Int,
         var avatarImgId_str: String?
@@ -62,7 +62,7 @@ data class Account(
         var baoyueVersion: Int,
         var donateVersion: Int,
         var vipType: Int,
-        var viptypeVersion: Int,
+        var viptypeVersion: Long,
         var anonimousUser: Boolean
                   )
 

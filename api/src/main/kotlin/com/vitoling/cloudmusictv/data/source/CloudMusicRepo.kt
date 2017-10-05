@@ -2,8 +2,10 @@ package com.vitoling.cloudmusictv.data.source
 
 import com.google.gson.GsonBuilder
 import com.vitoling.cloudmusictv.data.model.LoginResponse
+import com.vitoling.cloudmusictv.data.model.song.enhance.player.SongUrlResponse
 import com.vitoling.cloudmusictv.data.model.user.PlaylistResponse
 import com.vitoling.cloudmusictv.data.model.v3.playlist.PlaylistDetailResponse
+import com.vitoling.cloudmusictv.data.model.v3.song.SongDetailResponse
 import okhttp3.*
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -64,8 +66,10 @@ internal interface CloudMusicAPI {
         }
 
         // 设置cookie
-        private val cookieManager = CookieManager().apply {
+        val cookieManager = CookieManager().apply {
             setCookiePolicy(CookiePolicy.ACCEPT_ALL)
+            // add a basic cookie "appver"
+            // cookies will update automatically after each call
             cookieStore.add(URI(BASE_API_URL), HttpCookie(COOKIE_APP_VER, COOKIE_APP_VER_VALUE).apply {
                 domain = COOKIE_DOMAIN
             })
@@ -103,22 +107,31 @@ internal interface CloudMusicAPI {
     fun feedback_weblog(@Body body: RequestBody): Call<Map<String, Any>>
 
     /**
-     * 获取验证码
+     * get captcha
      * */
     @GET("/captcha?id={id}")
     fun captcha(@Path("id") id: String): Call<ResponseBody>
 
     /**
-     * 获取用户的歌单
+     * get playlists
      * */
     @POST("user/playlist")
     fun user_playlist(@Body body: RequestBody): Call<PlaylistResponse>
 
     /**
-     * 获取歌单的详情
+     * get playlist detail
      * */
     @POST("v3/playlist/detail")
     fun v3_playlist_detail(@Body body: RequestBody): Call<PlaylistDetailResponse>
+
+    /**
+     * Get song detail
+     * */
+    @POST("v3/song/detail")
+    fun v3_song_detail(@Body body: RequestBody): Call<SongDetailResponse>
+
+    @POST("song/enhance/player/url")
+    fun song_enhance_player_url(@Body body: RequestBody): Call<SongUrlResponse>
 
     /**
      *

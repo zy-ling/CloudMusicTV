@@ -1,11 +1,15 @@
 buildscript {
     repositories {
-        maven { url 'http://maven.aliyun.com/mvn/repository/' }
+//        maven { url 'http://maven.aliyun.com/mvn/repository/' }
+        mavenCentral()
+        maven {
+            url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2'
+        }
 
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0'
+        classpath 'com.android.tools.build:gradle:2.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
     }
 }
@@ -24,9 +28,13 @@ allprojects {
     }
 
     repositories {
-        maven { url 'http://maven.aliyun.com/mvn/repository/' }
+//        maven { url 'http://maven.aliyun.com/mvn/repository/' }
+        mavenCentral()
         maven {
             url "https://jitpack.io"
+        }
+        maven{
+            url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2'
         }
     }
 }
