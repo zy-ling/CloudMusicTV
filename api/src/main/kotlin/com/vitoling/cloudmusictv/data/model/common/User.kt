@@ -8,7 +8,7 @@ package com.vitoling.cloudmusictv.data.model.common
  *
  */
 
-data class Creator(
+data class User(
         var defaultAvatar: Boolean,
         var province: Long,
         var authStatus: Int,

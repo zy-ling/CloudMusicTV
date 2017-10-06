@@ -1,6 +1,6 @@
 package com.vitoling.cloudmusictv.data.model.user
 
-import com.vitoling.cloudmusictv.data.model.common.Creator
+import com.vitoling.cloudmusictv.data.model.common.User
 
 /**
  * Created by lingzhiyuan.
@@ -21,7 +21,7 @@ data class PlaylistResponse(
 data class Playlist(
         var subscribers: List<Any>,
         var subscribed: Boolean,
-        var creator: Creator?,
+        var creator: User?,
         var artists: Any?,
         var tracks: Any?,
         var tags: List<String>?,

@@ -1,6 +1,6 @@
 package com.vitoling.cloudmusictv.data.model.v3.playlist
 
-import com.vitoling.cloudmusictv.data.model.common.Creator
+import com.vitoling.cloudmusictv.data.model.common.User
 
 
 /**
@@ -20,7 +20,7 @@ data class PlaylistDetailResponse(
 data class PlaylistDetail(
         var subscribers: List<Any>,
         var subscribed: Boolean,
-        var creator: Creator,
+        var creator: User,
         var tracks: List<Track>,
         var trackIds: List<TrackId>,
         var tags: List<String>,
