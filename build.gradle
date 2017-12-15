@@ -1,11 +1,6 @@
 buildscript {
     repositories {
-//        maven { url 'http://maven.aliyun.com/mvn/repository/' }
-        mavenCentral()
-        maven {
-            url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2'
-        }
-
+        jcenter()
     }
 
     dependencies {
@@ -28,13 +23,9 @@ allprojects {
     }
 
     repositories {
-//        maven { url 'http://maven.aliyun.com/mvn/repository/' }
-        mavenCentral()
+        jcenter()
         maven {
             url "https://jitpack.io"
-        }
-        maven{
-            url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2'
         }
     }
 }

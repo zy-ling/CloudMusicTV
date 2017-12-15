@@ -51,39 +51,40 @@ internal interface CloudMusicAPI {
                 .setDateFormat("yyyy-MM-dd hh:mm:ss")
                 .create()
 
-        // 通用请求头信息
+        // headInterceptor
         private val headerInterceptor = Interceptor { chain ->
             val originalRequest = chain.request()
+            val headers = Headers.Builder().apply {
+                set(HEADER_ORIGIN, HEADER_ORIGIN_VALUE)
+                set(HEADER_HOST, HEADER_HOST_VALUE)
+                set(HEADER_REFERER, HEADER_REFERER_VALUE)
+                set(HEADER_USER_AGENT, HEADER_USER_AGENT_VALUE)
+                set(HEADER_CONTENT_TYPE, HEADER_CONTENT_TYPE_VALUE)
+            }
+
             val requestBuilder = originalRequest.newBuilder()
-                    .header(HEADER_ORIGIN, HEADER_ORIGIN_VALUE)
-                    .header(HEADER_HOST, HEADER_HOST_VALUE)
-                    .header(HEADER_REFERER, HEADER_REFERER_VALUE)
-                    .header(HEADER_USER_AGENT, HEADER_USER_AGENT_VALUE)
-                    .header(HEADER_CONTENT_TYPE, HEADER_CONTENT_TYPE_VALUE)
+                    .headers(headers.build())
                     .method(originalRequest.method(), originalRequest.body())
             val request = requestBuilder.build()
             chain.proceed(request)
         }
 
-        // 设置cookie
+        // cookies
         private val cookieManager = CookieManager().apply {
             setCookiePolicy(CookiePolicy.ACCEPT_ALL)
-            // add a basic cookie "appver"
+            val appVerCookie = HttpCookie(COOKIE_APP_VER, COOKIE_APP_VER_VALUE).apply { domain = COOKIE_DOMAIN }
             // cookies will update automatically after each call
-            cookieStore.add(URI(BASE_API_URL), HttpCookie(COOKIE_APP_VER, COOKIE_APP_VER_VALUE).apply {
-                domain = COOKIE_DOMAIN
-            })
+            cookieStore.add(URI(BASE_API_URL), appVerCookie)
         }
 
         val CLOUD_MUSIC_API_ADAPTER: Retrofit by lazy {
-            // Build retrofit
+            // build the retrofit adapter by lazy
             Retrofit.Builder().run {
                 addConverterFactory(GsonConverterFactory.create(gson))
                 baseUrl(BASE_API_URL)
                 client(OkHttpClient.Builder().run {
                     addInterceptor(headerInterceptor)
                     cookieJar(JavaNetCookieJar(cookieManager))
-                    // build okhttp client
                     build()
                 })
                 build()
@@ -101,10 +102,10 @@ internal interface CloudMusicAPI {
      * 手机号登录
      * */
     @POST("login/cellphone")
-    fun login_cellphone(@Body body: RequestBody): Call<LoginResponse>
+    fun loginViaCellphone(@Body body: RequestBody): Call<LoginResponse>
 
     @POST("feedback/weblog")
-    fun feedback_weblog(@Body body: RequestBody): Call<Map<String, Any>>
+    fun feedbackWeblog(@Body body: RequestBody): Call<Map<String, Any>>
 
     /**
      * get captcha
@@ -116,28 +117,23 @@ internal interface CloudMusicAPI {
      * get playlists
      * */
     @POST("user/playlist")
-    fun user_playlist(@Body body: RequestBody): Call<PlaylistResponse>
+    fun userPlaylist(@Body body: RequestBody): Call<PlaylistResponse>
 
     /**
      * get playlist detail
      * */
     @POST("v3/playlist/detail")
-    fun v3_playlist_detail(@Body body: RequestBody): Call<PlaylistDetailResponse>
+    fun playlistDetail(@Body body: RequestBody): Call<PlaylistDetailResponse>
 
     /**
      * Get song detail
      * */
     @POST("v3/song/detail")
-    fun v3_song_detail(@Body body: RequestBody): Call<SongDetailResponse>
+    fun songDetail(@Body body: RequestBody): Call<SongDetailResponse>
 
     @POST("song/enhance/player/url")
-    fun song_enhance_player_url(@Body body: RequestBody): Call<SongUrlResponse>
+    fun playerUrl(@Body body: RequestBody): Call<SongUrlResponse>
 
-    /**
-     *
-     * */
     @POST("user/getfollows/{id}")
-    fun user_getfollows(@Path("id") id: Long, @Body body: RequestBody): Call<PlaylistResponse>
-
-
+    fun userGetfollows(@Path("id") id: Long, @Body body: RequestBody): Call<PlaylistResponse>
 }

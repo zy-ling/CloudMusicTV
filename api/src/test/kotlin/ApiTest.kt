@@ -1,5 +1,6 @@
 import com.google.gson.Gson
 import com.vitoling.cloudmusictv.data.service.*
+import org.junit.jupiter.api.Test
 
 /**
  * Created by lingzhiyuan.
@@ -8,19 +9,45 @@ import com.vitoling.cloudmusictv.data.service.*
  *
  */
 
-fun main(args: Array<String>) {
+class Tests {
 
-//    val res = CloudMusicService.loginViaCellphone("18970967366", "ling371148667")
-//    println(Gson().toJson(res.body()))
-    //        val res2 = CloudMusicService.loginViaUsername("vitoling95@163.com", "ling371148667")
-    //        println(Gson().toJson(res2.body()))
-    //        val pl = CloudMusicService.fetchMyPlaylist(uid = res.body().account?.id ?: 48167)
-    //        println(Gson().toJson(pl.body()))
-        val pd = CloudMusicService.fetchPlaylistDetail(/*pl.body().playlist?.get(5)?.id ?: */14660449, 0, true, 1000, 1000)
-        println(Gson().toJson(pd.body()))
-    //    val sd = CloudMusicService.fetchSongDetail(pd.body().playlist.trackIds[0].id)
-    //    println(Gson().toJson(sd.body()))
-    //    val su = CloudMusicService.fetchSongUrl(sd.body().songs[0].id)
-    //    println(Gson().toJson(su.body()))
+    companion object {
+        private val gson by lazy { Gson() }
+    }
+
+    @Test
+    fun loginViaCellphone() {
+        val pd = CloudMusicService.loginViaCellphone("", "")
+        println(gson.toJson(pd.body()))
+    }
+
+    @Test
+    fun loginViaUsername() {
+        val pd = CloudMusicService.loginViaUsername("", "")
+        println(gson.toJson(pd.body()))
+    }
+
+    @Test
+    fun fetchMyPlaylists() {
+        val pd = CloudMusicService.fetchMyPlaylists(uid = 17952620)
+        println(gson.toJson(pd.body()))
+    }
+
+    @Test
+    fun fetchSongDetail() {
+        val pd = CloudMusicService.fetchSongDetail(id = 33111366)
+        println(gson.toJson(pd.body()))
+    }
+
+    @Test
+    fun fetchSongUrl() {
+        val pd = CloudMusicService.fetchSongUrl(id = 33111366)
+        println(gson.toJson(pd.body()))
+    }
+
+    @Test
+    fun fetchPlalistDetail() {
+        val pd = CloudMusicService.fetchPlaylistDetail(14660449, 0, true, 1000, 1000)
+        println(gson.toJson(pd.body()))
+    }
 }
-

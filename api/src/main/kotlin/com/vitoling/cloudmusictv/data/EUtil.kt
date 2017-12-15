@@ -55,10 +55,10 @@ object EUtil {
             val bs = digest.digest(it.toByteArray())
             var hexString = ""
             bs.asSequence().map { it.toInt() and 255 }.forEach {
-                if (it in 0 .. 15) {
-                    hexString += ("0" + Integer.toHexString(it))
+                hexString += if (it in 0 .. 15) {
+                    ("0" + Integer.toHexString(it))
                 } else {
-                    hexString += Integer.toHexString(it)
+                    Integer.toHexString(it)
                 }
             }
             hexString
