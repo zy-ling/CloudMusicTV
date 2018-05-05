@@ -8,10 +8,10 @@ package com.vitoling.cloudmusictv.data
  */
 
 import org.apache.commons.lang3.RandomStringUtils
-import sun.misc.BASE64Encoder
 import java.math.BigInteger
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
+import java.util.*
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
@@ -41,7 +41,7 @@ object EUtil {
             val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
             cipher.init(Cipher.ENCRYPT_MODE, skeySpec, iv)
             val encrypted = cipher.doFinal(text.toByteArray())
-            BASE64Encoder().encode(encrypted)
+            Base64.getEncoder().encodeToString(encrypted)
         } catch (e: Exception) {
             e.printStackTrace()
             ""
