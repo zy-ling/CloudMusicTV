@@ -1,4 +1,4 @@
-group 'com.hdwwxx'
+group 'com.zhiyuan'
 version '1.0'
 
 dependencies {
@@ -11,14 +11,8 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     compile 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
 
-
-    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
-//    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
-
-    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     compile "org.apache.commons:commons-lang3:3.5"
 
     testCompile "org.junit.jupiter:junit-jupiter-api:5.0.2"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:5.0.2"
-
 }

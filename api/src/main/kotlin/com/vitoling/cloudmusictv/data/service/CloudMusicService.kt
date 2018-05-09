@@ -10,7 +10,9 @@ import com.vitoling.cloudmusictv.data.model.v3.song.SongDetailResponse
 import com.vitoling.cloudmusictv.data.source.CloudMusicAPI
 import okhttp3.FormBody
 import okhttp3.RequestBody
+import retrofit2.Call
 import retrofit2.Response
+import kotlin.reflect.KFunction1
 
 /**
  * Created by lingzhiyuan.
@@ -36,16 +38,14 @@ object CloudMusicService {
         return FormBody.Builder().add(PARAMS, params).add(ENC_SEC_KEY, encSecKey).build()
     }
 
-    private val musicAPI: CloudMusicAPI by lazy { CloudMusicAPI.CLOUD_MUSIC_API_ADAPTER.create(CloudMusicAPI::class.java) }
+    private val musicAPI by lazy { CloudMusicAPI.CLOUD_MUSIC_API_ADAPTER.create(CloudMusicAPI::class.java) }
 
     /**
      * login via cell phone
      * */
     internal fun loginViaCellphone(phone: String, password: String): Response<LoginResponse> {
-        val loginParams = mapOf("phone" to phone, "password" to EUtil.MD5Encrypt(password), "rememberLogin" to true.toString())
-        val formBody = doRequest(loginParams)
-        val call = musicAPI.loginViaCellphone(formBody)
-        return call.execute()
+        val params = mapOf("phone" to phone, "password" to EUtil.MD5Encrypt(password), "rememberLogin" to true.toString())
+        return execute(params, musicAPI::loginViaCellphone)
     }
 
     /**
@@ -54,30 +54,22 @@ object CloudMusicService {
      * */
     internal fun loginViaUsername(username: String, password: String): Response<Any> {
         val params = mapOf("username" to username, "password" to EUtil.MD5Encrypt(password), "rememberLogin" to true, "clientToken" to "1_E+ypitxL1PuC0dQsbWpFSbfoJrl6OzKN_JQJaQgkv32AtvYSndelHB4UMOzOTuWty_BxTl/MPFvyHLdF4KmnGaSw==")
-        val formBody = doRequest(params)
-        val call = musicAPI.login(formBody)
-        return call.execute()
+        return execute(params, musicAPI::login)
     }
 
     internal fun fetchPlaylistDetail(id: Long, offset: Long, total: Boolean, limit: Long, n: Long): Response<PlaylistDetailResponse> {
         val params = mapOf("id" to id, "offset" to offset, "total" to total, "limit" to limit, "n" to n)
-        val formBody = doRequest(params)
-        val call = musicAPI.playlistDetail(formBody)
-        return call.execute()
+        return execute(params, musicAPI::playlistDetail)
     }
 
     internal fun fetchMyPlaylists(offset: Long = 0, limit: Long = 1001, uid: Long): Response<PlaylistResponse> {
         val params = mapOf("offset" to offset, "limit" to limit, "uid" to uid)
-        val formBody = doRequest(params)
-        val call = musicAPI.userPlaylist(formBody)
-        return call.execute()
+        return execute(params, musicAPI::userPlaylist)
     }
 
     internal fun fetchSongDetail(id: Long): Response<SongDetailResponse> {
         val params = mapOf("c" to "[{\"id\":$id}]", "ids" to "[$id]")
-        val formBody = doRequest(params)
-        val call = musicAPI.songDetail(formBody)
-        return call.execute()
+        return execute(params, musicAPI::songDetail)
     }
 
     /**
@@ -85,9 +77,11 @@ object CloudMusicService {
      * */
     internal fun fetchSongUrl(id: Long, br: Long = 999000): Response<SongUrlResponse> {
         val params = mapOf("br" to br, "ids" to "[$id]")
-        val formBody = doRequest(params)
-        val call = musicAPI.playerUrl(formBody)
-        return call.execute()
+        return execute(params, musicAPI::playerUrl)
+    }
+
+    private inline fun <reified T> execute(params: Map<String, Any>, body: KFunction1<RequestBody, Call<T>>): Response<T> {
+        return body(doRequest(params)).execute()
     }
 }
 
